@@ -1,0 +1,93 @@
+<h2>DAR DE ALTA UN NUEVO PRODUCTO</h2>
+<div class="row fila">
+	<div class="col-6 mb-5">
+		<div class="card">
+			<div class="card-header">
+				<h4 style="text-align: center;">INTRODUZCA NUEVOS DATOS</h4>
+			</div>
+			<div class="card-body formulario">
+					<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">ID</span>
+							</div>
+							<input type="text" class="form-control" name="idProducto" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
+							</div>
+							<input type="text" class="form-control" name="nombre" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Descripcion</span>
+							</div>
+							<input type="text" class="form-control" name="descripcion" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Categoria</span>
+							</div>
+							<input type="text" class="form-control" name="categoria" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">PvP</span>
+							</div>
+							<input type="number" class="form-control" name="precioUnitario" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Stock</span>
+							</div>
+							<input type="text" class="form-control" name="unidadesEnStock" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+
+
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Condiciones</span>
+							</div>
+							<div class="form-check m-2">
+								<label class="form-check-label" for="viejo">
+									Viejo
+								</label>
+								<input class="form-check-input" type="radio" name="condiciones" ngModel required id="viejo" value="viejo">
+							</div>
+							<div class="form-check m-2">
+								<label class="form-check-label" for="nuevo">
+									Nuevo
+								</label>
+								<input class="form-check-input" type="radio" name="condiciones" ngModel required id="nuevo" value="nuevo">
+							</div>
+						</div>
+
+							<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Fabricante</span>
+							</div>
+							<input type="text" class="form-control" name="fabricante" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<div class="input-group input-group-sm mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroup-sizing-sm">Unidades Pedido</span>
+							</div>
+							<input type="number" name="unidadesPedido" ngModel required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+						</div>
+						<div class="card-footer pie">
+							<a routerLink="/productos" class="btn btn-light">VOLVER</a>
+							<button class="btn btn-success" type="submit" >AGREGAR</button>
+						</div>
+					</form>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	.formulario{background: #616A6B;}
+	h5{color: wheat;}
+	h2{margin: 0 auto; text-align: center; margin-top: 2%;}
+	.pie{display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;}
+	.fila{margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative;}
+</style>

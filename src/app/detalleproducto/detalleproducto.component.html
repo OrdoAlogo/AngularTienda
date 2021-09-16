@@ -1,0 +1,28 @@
+<h2>DETALLES DE {{ds.producto.nombre}}</h2>
+<div class="row fila" >
+	<div class="col-6">
+		<div class="card">
+			<div class="card-header">
+				<h4>Id: {{ds.producto.categoria}}</h4>
+			</div>
+			<div class="card-body producto">
+				<h5>Categoria: {{ds.producto.categoria}}</h5>
+				<p>{{ds.producto.descripcion}}</p>
+				<p>{{ds.producto.precioUnitario}} Euros</p>
+				<p>Stock: {{ds.producto.unidadesEnStock}} unidades</p>
+				<p>Unidades Pedidas: {{ds.producto.unidadesPedido}}</p>
+				<p>Fabricante: {{ds.producto.fabricante}}</p>
+			</div>
+			<div class="card-footer">
+				<a routerLink="/productos" class="btn btn-secondary">VOLVER</a>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+	p{color: white; margin: 0;}
+	h5{color: wheat;}
+	h2{margin: 0 auto; text-align: center; margin-top: 2%;}
+	.fila{margin: 0 auto;display: flex; flex-direction: column; justify-content: center; align-items: center;}
+	.producto{background: #273746; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+</style>

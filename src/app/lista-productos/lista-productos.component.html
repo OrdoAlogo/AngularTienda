@@ -1,0 +1,16 @@
+<h2 style="margin: 0 auto; text-align: center; margin-top: 2%;">LISTADO DE PRODUCTOS</h2>
+<div class="row" style="margin: 0 auto; width: 80%;">
+	<div class="col-3" *ngFor="let producto of productos">
+		<div style="display: flex; flex-direction: column; align-items: center; background: #D5DBDB; border: 1px solid black; border-radius: 10px; margin: 2%;">
+			<h5>Producto: {{producto.idProducto}}</h5>
+			<p>{{producto.nombre}}</p>
+			<p>{{producto.categoria}}</p>
+			<p style="color: red;">{{producto.precioUnitario}} Euros</p>
+			<div style="display: flex; flex-direction: row; ">
+				<a routerLink="/ver" class="btn btn-info m-1" [class.active]="producto==productSelected" (click)="verProducto(producto)">Ver</a>
+				<a routerLink="/editar" [class.active]="producto==productSelected" (click)="irEditarProducto(producto)"  class="btn btn-warning m-1">Editar</a>
+				<a href="" class="btn btn-danger m-1" (click)="eliminarProducto(producto.idProducto)">X</a>
+			</div>
+		</div>
+	</div>
+</div>
