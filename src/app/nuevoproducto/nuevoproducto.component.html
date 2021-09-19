@@ -11,37 +11,37 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">ID</span>
 							</div>
-							<input type="text" class="form-control" name="idProducto" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="text" class="form-control" name="idProducto" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">Nombre</span>
 							</div>
-							<input type="text" class="form-control" name="nombre" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="text" class="form-control" name="nombre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">Descripcion</span>
 							</div>
-							<input type="text" class="form-control" name="descripcion" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="text" class="form-control" name="descripcion" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">Categoria</span>
 							</div>
-							<input type="text" class="form-control" name="categoria" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="text" class="form-control" name="categoria" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">PvP</span>
 							</div>
-							<input type="number" class="form-control" name="precioUnitario" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="number" class="form-control" name="precioUnitario" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">Stock</span>
 							</div>
-							<input type="text" class="form-control" name="unidadesEnStock" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="text" class="form-control" name="unidadesEnStock" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 
 
@@ -53,13 +53,13 @@
 								<label class="form-check-label" for="viejo">
 									Viejo
 								</label>
-								<input class="form-check-input" type="radio" name="condiciones" ngModel required id="viejo" value="viejo">
+								<input class="form-check-input" type="radio" name="condiciones"  id="viejo" value="viejo" ngModel required>
 							</div>
 							<div class="form-check m-2">
 								<label class="form-check-label" for="nuevo">
 									Nuevo
 								</label>
-								<input class="form-check-input" type="radio" name="condiciones" ngModel required id="nuevo" value="nuevo">
+								<input class="form-check-input" type="radio" name="condiciones"  id="nuevo" value="nuevo" ngModel required>
 							</div>
 						</div>
 
@@ -67,17 +67,17 @@
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">Fabricante</span>
 							</div>
-							<input type="text" class="form-control" name="fabricante" ngModel required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="text" class="form-control" name="fabricante"  aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 						<div class="input-group input-group-sm mb-3">
 							<div class="input-group-prepend">
 								<span class="input-group-text" id="inputGroup-sizing-sm">Unidades Pedido</span>
 							</div>
-							<input type="number" name="unidadesPedido" ngModel required class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+							<input type="number" name="unidadesPedido" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" ngModel required>
 						</div>
 						<div class="card-footer pie">
 							<a routerLink="/productos" class="btn btn-light">VOLVER</a>
-							<button class="btn btn-success" type="submit" >AGREGAR</button>
+							<button class="btn btn-success"[disabled]="!f.valid" type="submit" >AGREGAR</button>
 						</div>
 					</form>
 			</div>

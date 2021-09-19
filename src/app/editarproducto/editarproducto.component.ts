@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from '../Entidades/producto';
 import { DataService } from '../servicios/data.service';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class EditarproductoComponent implements OnInit {
 
   productSelected!:Producto;
   
-  constructor(public ds:DataService) { }
+  constructor(public ds:DataService, private ruta:Router) { }
 
   ngOnInit(): void {
   }
@@ -41,5 +42,6 @@ export class EditarproductoComponent implements OnInit {
       (err)=>{console.log("Fallo al actualizar el Producto: "+ JSON.stringify(err))}
     );
     form.resetForm();
+    this.ruta.navigateByUrl('/productos');
   }
 }

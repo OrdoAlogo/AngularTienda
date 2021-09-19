@@ -3,6 +3,7 @@ import { Producto } from '../Entidades/producto';
 import { DataService } from '../servicios/data.service';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nuevoproducto',
@@ -13,7 +14,7 @@ export class NuevoproductoComponent implements OnInit {
   
   
   producto!:Producto;
-  constructor(private ds:DataService) { }
+  constructor(private ds:DataService,private ruta:Router) { }
 
   ngOnInit(): void {
     
@@ -40,6 +41,8 @@ onSubmit(form:NgForm){
     );
 
     form.resetForm();
+    //Una vez agregado un producto, nos redirige a la lista de productos
+    this.ruta.navigateByUrl('/productos');
 }
 
 }

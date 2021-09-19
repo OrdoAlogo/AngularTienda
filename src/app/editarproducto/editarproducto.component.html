@@ -75,7 +75,7 @@
 						</div>
 						<div class="card-footer pie">
 							<a routerLink="/productos" class="btn btn-light">VOLVER</a>
-							<button class="btn btn-success" type="submit" >AGREGAR</button>
+							<button class="btn btn-success" type="submit" [disabled]="!f.valid">GUARDAR</button>
 						</div>
 					</form>
 			</div>	

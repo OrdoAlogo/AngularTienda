@@ -9,15 +9,23 @@ import { AutentificacinService } from '../servicios/autentificacin.service';
 export class LoginComponent implements OnInit {
   
   logeado!:boolean;
-  
+  estilo!:string;
+  mensaje!:string;
+ 
   constructor(private as:AutentificacinService) { }
 
   ngOnInit(): void {
     this.logeado = this.as.getEstaLogeado();
+    this.estilo = this.as.getEstilos();
+    this.mensaje = this.as.getMensaje();
   }
 
- onLogin(){
+ entrar(){
+   
    this.as.login();
    this.logeado = this.as.getEstaLogeado();
+   this.estilo = this.as.getEstilos();
+   this.mensaje = this.as.getMensaje();
  }
+
 }
